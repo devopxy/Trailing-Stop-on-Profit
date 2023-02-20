@@ -19,7 +19,10 @@ enum ENUM_CONSIDER
 };
 
 input group "Expert advisor settings"
-input int TrailingStop = 50;                       // Trailing Stop, points
+input int TrailingMAPeriod = 50;                       // Trailing MA Period
+input int TrailingMAShift = 0;                          // Trailing MA Shift
+input ENUM_MA_MODE TrailingMAMode = MODE_SMMA;         // Trailing MA Mode
+input ENUM_MA_PRICE TrailingMAPrice = PRICE_High    // TrailingMA Price
 input int Profit = 100;                            // Profit in points when TS should kick in.
 input group "Orders filtering options"
 input ENUM_CONSIDER OnlyType = All;                // Apply to
